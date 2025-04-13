@@ -1,0 +1,4 @@
+.fi-wi-stats-overview-stat {
+    @apply bg-gray-100/80;
+    @apply ring-0;
+}

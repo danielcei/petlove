@@ -1,0 +1,15 @@
+.fi-icon-btn-icon {
+    @apply text-gray-400;
+    @apply hover:fill-primary-500;
+}
+
+.fi-ta-actions .fi-ac-icon-btn-action {
+    @apply ring-1;
+    @apply ring-gray-200;
+    @apply mr-1;
+    @apply bg-white;
+}
+
+.fi-ta-actions .fi-ac-icon-btn-action .fi-icon-btn-icon {
+    @apply hover:fill-primary-500;
+}

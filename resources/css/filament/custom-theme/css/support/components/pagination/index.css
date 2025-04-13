@@ -1,0 +1,17 @@
+.fi-pagination-item .fi-pagination-item-label  {
+    @apply font-normal;
+}
+
+.fi-pagination-item.fi-active .fi-pagination-item-label  {
+    @apply text-white;
+    @apply font-semibold;
+}
+
+.fi-pagination-item.fi-active .fi-pagination-item-button {
+    @apply bg-primary-500;
+    @apply text-white;
+}
+
+.fi-pagination-overview {
+    @apply font-normal;
+}

@@ -1,0 +1,15 @@
+.fi-form {
+    @apply block;
+    @apply rounded-xl;
+    @apply p-6;
+    @apply bg-gray-50/80;
+}
+
+.fi-form .fi-ac {
+    @apply pt-4;
+}
+
+.fi-form:has(.fi-section-content) {
+    @apply p-0;
+    @apply bg-white;
+}

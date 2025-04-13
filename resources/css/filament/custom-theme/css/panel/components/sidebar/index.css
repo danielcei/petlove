@@ -1,0 +1,89 @@
+.fi-sidebar-header {
+    @apply bg-gray-50;
+    @apply border-r-2;
+    @apply border-gray-100;
+}
+
+.fi-sidebar-nav {
+    @apply bg-gray-50;
+    @apply border-r-2;
+    @apply border-gray-100;
+    scrollbar-gutter: auto !important;
+}
+
+.dark .fi-sidebar-header {
+    @apply bg-gray-900;
+    @apply border-r-2;
+    @apply border-gray-200;
+}
+
+.dark .fi-sidebar-nav {
+    @apply bg-gray-900;
+    @apply border-r-2;
+    @apply border-gray-900;
+    scrollbar-gutter: auto !important;
+}
+
+
+.fi-sidebar-nav-groups {
+    @apply gap-y-4;
+}
+
+.fi-sidebar-item {
+    @apply gap-y-0;
+}
+
+.fi-sidebar-item .fi-badge {
+    @apply bg-white;
+    @apply text-gray-700;
+}
+
+.fi-sidebar-item-icon {
+    @apply transition ease-in-out;
+    @apply text-gray-700;
+}
+
+.fi-sidebar-open .fi-sidebar-item-icon {
+    @apply scale-75;
+    @apply transition ease-in-out;
+}
+
+.fi-sidebar-item-button {
+    @apply text-white;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item-button,
+.fi-sidebar-item-active .fi-sidebar-item-button:hover {
+    @apply bg-primary-500;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item .fi-sidebar-item-button,
+.fi-sidebar-item-active .fi-sidebar-item .fi-sidebar-item-button:hover {
+    @apply bg-gray-100;
+}
+
+.fi-sidebar-item-label {
+    @apply text-gray-700;
+    @apply font-normal;
+}
+
+.fi-sidebar-sub-group-items .fi-sidebar-item .fi-sidebar-item-icon {
+    @apply scale-75;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item-label,
+.fi-sidebar-item-active .fi-sidebar-item-icon
+{
+    @apply text-white;
+}
+
+.fi-sidebar-item-active .fi-sidebar-item .fi-sidebar-item-label,
+.fi-sidebar-item-active .fi-sidebar-item .fi-sidebar-item-icon
+{
+    @apply text-gray-600;
+}
+
+.fi-sidebar-item-grouped-border {
+    @apply pr-2;
+    @apply invisible;
+}

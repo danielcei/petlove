@@ -1,0 +1,12 @@
+.fi-tabs {
+    @apply ring-0;
+    @apply mx-0;
+}
+
+.fi-tabs-item {
+    @apply px-5;
+}
+
+.fi-tabs-item-active {
+    @apply bg-primary-50;
+}

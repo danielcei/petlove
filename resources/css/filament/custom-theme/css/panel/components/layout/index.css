@@ -1,0 +1,12 @@
+.fi-body {
+    @apply bg-white;
+}
+
+.fi-breadcrumbs-item-label{
+    @apply text-success-700;
+}
+
+.fi-breadcrumbs-item-separator{
+    @apply text-success-700;
+}
+

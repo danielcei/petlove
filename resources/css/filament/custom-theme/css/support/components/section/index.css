@@ -1,0 +1,4 @@
+.fi-section {
+    @apply bg-gray-100/80;
+    @apply ring-0;
+}

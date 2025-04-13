@@ -1,0 +1,89 @@
+.fi-ta-table {
+    @apply divide-none;
+}
+
+.fi-ta-table thead {
+    @apply border-b-2;
+    @apply border-gray-50;
+}
+
+.fi-ta-table thead tr {
+    @apply bg-gray-50/80;
+}
+
+.fi-ta-table tbody {
+    @apply divide-none;
+}
+
+.fi-ta-row {
+    @apply even:bg-gray-50;
+    @apply odd:bg-white;
+}
+
+.fi-ta-actions span {
+    @apply font-normal;
+}
+
+.fi-ta-ctn {
+    @apply bg-gray-50;
+    @apply ring-0;
+}
+
+.fi-ta-summary-header-row {
+    @apply !bg-gray-100/80;
+}
+
+.fi-ta-summary-row {
+    @apply !bg-white;
+}
+
+.fi-pagination {
+    @apply bg-gray-100/80;
+}
+
+/* Estilos para o modo escuro */
+@media (prefers-color-scheme: dark) {
+    .fi-ta-table {
+        @apply divide-none;
+    }
+
+    .fi-ta-table thead {
+        @apply border-b-2;
+        @apply border-gray-800;
+    }
+
+    .fi-ta-table thead tr {
+        @apply bg-gray-900/80;
+    }
+
+    .fi-ta-table tbody {
+        @apply divide-none;
+    }
+
+    .fi-ta-row {
+        @apply even:bg-gray-800;
+        @apply odd:bg-gray-900;
+    }
+
+    .fi-ta-actions span {
+        @apply font-normal;
+        @apply text-gray-300; /* Para o texto ficar visível em fundo escuro */
+    }
+
+    .fi-ta-ctn {
+        @apply bg-gray-900;
+        @apply ring-0;
+    }
+
+    .fi-ta-summary-header-row {
+        @apply !bg-gray-800/80;
+    }
+
+    .fi-ta-summary-row {
+        @apply !bg-gray-900;
+    }
+
+    .fi-pagination {
+        @apply bg-gray-800/80;
+    }
+}

@@ -1,0 +1,18 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+@import "./support/components/button/index.css";
+@import "./support/components/input/checkbox.css";
+@import "./support/components/icon-button/index.css";
+@import "./support/components/section/index.css";
+@import "./support/components/fieldset/index.css";
+@import "./support/components/tabs/index.css";
+@import "./support/components/pagination/index.css";
+
+@import "./panel/components/header/index.css";
+@import "./panel/components/sidebar/index.css";
+/*import "./table/components/index.css";*/
+
+@import "./widget/components/index.css";
+
+@import "./panel/components/layout/index.css";
+/*@import "./form/index.css"; */

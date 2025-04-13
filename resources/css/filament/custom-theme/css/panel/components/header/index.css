@@ -1,0 +1,9 @@
+.fi-header-heading {
+    @apply text-primary-700;
+    font-size:24pt;
+}
+
+.dark .fi-header-heading {
+    @apply font-normal;
+    @apply text-primary-50;
+}

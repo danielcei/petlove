@@ -1,0 +1,10 @@
+.fi-btn {
+    @apply px-1;
+    @apply py-1.5;
+}
+
+.fi-btn-label {
+    @apply px-2;
+    @apply text-sm;
+    @apply font-normal;
+}
