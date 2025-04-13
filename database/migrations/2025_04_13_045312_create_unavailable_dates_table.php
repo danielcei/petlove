@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('unavailable_dates', function (Blueprint $table) {
             $table->id();
-            $table->softDeletes();
             $table->date('date')->unique();
             $table->string('reason')->nullable();
             $table->softDeletes();
