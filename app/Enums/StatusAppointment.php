@@ -19,20 +19,20 @@ enum StatusAppointment: string implements HasLabel, HasIcon, HasColor
     {
         return match ($this) {
             self::STATUS_AGENDADO => 'Agendado',
-            self::STATUS_AGUARDANDO => 'Aguardando Atendimento',
-            self::STATUS_EM_ANDAMENTO => 'Em Andamento',
+            self::STATUS_AGUARDANDO => 'Aguardando Atendimento...',
+            self::STATUS_EM_ANDAMENTO => 'Em Andamento...',
             self::STATUS_ATENDIMENTO_FINALIZADO => 'Atendimento Finalizado',
-            self::STATUS_DEVOLVIDO => 'Finalizado - Pet Devolvido',
+            self::STATUS_DEVOLVIDO => 'Finalizado - Pet Devolvido!',
         };
     }
 
     public function getColor(): string|array|null
     {
         return match ($this) {
-            self::STATUS_AGENDADO => 'green',
-            self::STATUS_AGUARDANDO => 'orange',
-            self::STATUS_EM_ANDAMENTO => 'blue',
-            self::STATUS_ATENDIMENTO_FINALIZADO => 'lightblue',
+            self::STATUS_AGENDADO => 'info',
+            self::STATUS_AGUARDANDO => 'danger',
+            self::STATUS_EM_ANDAMENTO => 'warning',
+            self::STATUS_ATENDIMENTO_FINALIZADO => 'success',
             self::STATUS_DEVOLVIDO => 'gray',
         };
     }
@@ -44,7 +44,7 @@ enum StatusAppointment: string implements HasLabel, HasIcon, HasColor
             self::STATUS_AGUARDANDO => 'heroicon-o-clock',
             self::STATUS_EM_ANDAMENTO => 'heroicon-o-play',
             self::STATUS_ATENDIMENTO_FINALIZADO => 'heroicon-o-check-circle',
-            self::STATUS_DEVOLVIDO => 'heroicon-o-reply',
+            self::STATUS_DEVOLVIDO => 'heroicon-o-check-circle',
         };
     }
 }

@@ -11,6 +11,7 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Columns\SelectColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -49,6 +50,11 @@ class AppointmentResource extends Resource
                 Tables\Columns\TextColumn::make('time')->label('Horário'),
                 TextColumn::make('status')
                     ->badge(),
+               /* SelectColumn::make('status')
+                    ->label('Status')
+                    ->options(StatusAppointment::class)
+                    ->sortable()
+                    ->searchable()*/
             ])
             ->filters([
             ])
