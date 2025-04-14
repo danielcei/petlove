@@ -21,4 +21,9 @@ class WelcomeMessage extends Widget
     {
         return redirect()->to(PetResource::getUrl('edit', [$recordId]));
     }
+
+    public function callCreate(string $action)
+    {
+        return redirect()->to(PetResource::getUrl('create'));
+    }
 }

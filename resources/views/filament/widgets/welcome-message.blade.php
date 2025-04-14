@@ -1,6 +1,6 @@
 <x-filament::widget class="col-span-1 md:col-span-2 lg:col-span-3 p-0 border-0">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        @foreach ($this->pets as $pet)
+        @forelse  ($this->pets as $pet)
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow p-4 relative">
                 <!-- Menu de ações -->
                 <div class="absolute top-2 right-2">
@@ -63,6 +63,29 @@
                 </div>
 
             </div>
-        @endforeach
+        @empty
+
+            <div class="col-span-full flex flex-col items-center justify-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow">
+                <div class="text-center mb-6">
+                    <x-heroicon-o-plus-circle class="w-16 h-16 mx-auto text-gray-400 dark:text-gray-500" />
+                    <h3 class="mt-4 text-lg font-medium text-gray-900 dark:text-white">
+                        Nenhum pet cadastrado
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                        Comece adicionando seu primeiro pet!
+                    </p>
+                </div>
+                <x-filament::button
+                    wire:click="callCreate('create')"
+                    icon="heroicon-o-plus"
+                    size="lg"
+                    color="primary"
+                >
+                    Adicionar Pet
+                </x-filament::button>
+            </div>
+            @endforelse
+
+
     </div>
 </x-filament::widget>

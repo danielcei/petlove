@@ -6,7 +6,6 @@ use App\Enums\StatusAppointment;
 use App\Filament\Resources\AppointmentResource\Pages;
 use App\Filament\Resources\AppointmentResource\RelationManagers;
 use App\Models\Appointment;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -35,8 +34,26 @@ class AppointmentResource extends Resource
 
     public static function table(Table $table): Table
     {
+        $Status = TextColumn::make('status')
+            ->badge();
+        if (auth()->user()->hasRole(['Admin', 'Backoffice'])) {
+            $Status = SelectColumn::make('status2')
+                ->label('Status')
+                ->options(StatusAppointment::class)
+                ->sortable()
+                ->searchable();
+        }
+
         return $table
             ->columns([
+                TextColumn::make('pet_id')
+                    ->label('Pet')
+                    ->html()
+                    ->formatStateUsing(function ($record) {
+                        return view('components.tables.pet-info-column', [
+                            'pet' => $record->pet,
+                        ])->render();
+                    }),
                 TextColumn::make('user_id')
                     ->label('Dono (contato)')
                     ->html()
@@ -45,16 +62,9 @@ class AppointmentResource extends Resource
                             'user' => $record->user,
                         ])->render();
                     }),
-                Tables\Columns\TextColumn::make('pet.name')->label('Pet')->searchable(),
                 Tables\Columns\TextColumn::make('date')->label('Data')->date(),
                 Tables\Columns\TextColumn::make('time')->label('Horário'),
-                TextColumn::make('status')
-                    ->badge(),
-               /* SelectColumn::make('status')
-                    ->label('Status')
-                    ->options(StatusAppointment::class)
-                    ->sortable()
-                    ->searchable()*/
+                $Status,
             ])
             ->filters([
             ])

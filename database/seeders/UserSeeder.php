@@ -18,9 +18,9 @@ class UserSeeder extends Seeder
     {
         $user = User::updateOrCreate(
             [
-                'email' => 'danielcei@gmail.com'],
+                'email' => 'admin@danielvs.com'],
             [
-                'name' => 'Daniel Vieira da Silva',
+                'name' => 'Daniel Admin',
                 'password' => Hash::make('123456'),
                 'cpf' => '00016688112',
                 'telephone' => '(61) 3218-1400',
@@ -34,5 +34,44 @@ class UserSeeder extends Seeder
             ]);
 
         $user->roles()->sync([1]);
+
+
+        $user = User::updateOrCreate(
+            [
+                'email' => 'backoffice@danielvs.com'],
+            [
+                'name' => 'Daniel Backoffice',
+                'password' => Hash::make('123456'),
+                'cpf' => '00016688112',
+                'telephone' => '(61) 3218-1400',
+                'status' => 'active',
+                'street' => 'QNN',
+                'number' => '09',
+                'zipcode' => '72220067',
+                'city' => 'Brasília',
+                'district' => 'Ceilândia',
+                'state' => 'Distrito Federal',
+            ]);
+
+        $user->roles()->sync([2]);
+
+        $user = User::updateOrCreate(
+            [
+                'email' => 'cliente@danielvs.com'],
+            [
+                'name' => 'Daniel Cliente',
+                'password' => Hash::make('123456'),
+                'cpf' => '00016688112',
+                'telephone' => '(61) 3218-1400',
+                'status' => 'active',
+                'street' => 'QNN',
+                'number' => '09',
+                'zipcode' => '72220067',
+                'city' => 'Brasília',
+                'district' => 'Ceilândia',
+                'state' => 'Distrito Federal',
+            ]);
+
+        $user->roles()->sync([3]);
     }
 }
